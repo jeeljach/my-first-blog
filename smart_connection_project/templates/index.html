@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Smart Connection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Le styles -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="//code.jquery.com/jquery-1.10.1.min.js" type="text/javascript"></script>
+    </head>
+    
+    <body>
+    <div class="container">
+     {% load static %}
+	 <h2>SMART CONNECTION</h1>
+	 <hr />
+		{% for post in Posts %}
+		<h1>Primer Nombre:{{ post.first_name }}</h1>
+		<h1>Apellido: {{ post.last_name }}</h1>
+		<h1>Empresa: {{ post.company_name }}</h1>
+		<h1>Pais:{{ post.country }}</h1>
+		<h1>Descripcion de la empresa: {{ post.company_descr }}</h1>
+		<h1>Area de negocio: {{ post.company_field }}</h1>
+		<hr />
+		{% endfor %}
+    </div> <!-- /container -->
+    </body>
+</html>
